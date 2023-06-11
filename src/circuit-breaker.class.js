@@ -1,12 +1,6 @@
-const axios = require('axios');
+import CircuitBreakerStates from './circuit-breaker.interface'
 
-const CircuitBreakerStates = {
-  OPENED: 'OPENED',
-  CLOSED: 'CLOSED',
-  HALF: 'HALF'
-}
-
-class CircuitBreaker {
+export default class CircuitBreaker {
   request = null;
   state = CircuitBreakerStates.CLOSED; // inital state
   failureCount = 0;
@@ -75,3 +69,4 @@ class CircuitBreaker {
     return data;
   }
 }
+
