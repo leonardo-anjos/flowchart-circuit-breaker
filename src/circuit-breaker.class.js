@@ -1,6 +1,8 @@
-import CircuitBreakerStates from './circuit-breaker.interface'
+const axios = require('axios');
 
-export default class CircuitBreaker {
+const CircuitBreakerStates = require('./circuit-breaker.interface')
+
+module.exports = class CircuitBreaker {
   request = null;
   state = CircuitBreakerStates.CLOSED; // inital state
   failureCount = 0;
