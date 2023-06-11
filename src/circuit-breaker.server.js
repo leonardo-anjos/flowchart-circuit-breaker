@@ -6,6 +6,7 @@ const fetchDataFromExternalVendor = async () => {
 }
 
 // sample request to fetch data asynchronously
+// const request = axios fetchDataFromExternalVendor();
 const request = fetchDataFromExternalVendor();
 
 // // wrap the request within a circuit breaker object
